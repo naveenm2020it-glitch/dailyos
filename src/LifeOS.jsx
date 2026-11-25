@@ -1806,10 +1806,10 @@ export default function LifeOS() {
   const selectedDayInfo = getDayMetrics(selectedWeekDay);
 
   return (
-    <div className="min-h-screen w-full bg-[#09090B] flex items-center justify-center p-0 sm:p-4 font-sans">
+    <div className="min-h-[100dvh] w-full bg-[#09090B] flex items-center justify-center p-0 font-sans">
       {/* Mobile Device Frame */}
       <div
-        className={`relative w-full max-w-[430px] h-[100dvh] sm:h-[860px] sm:rounded-[38px] overflow-hidden flex flex-col border transition-colors ${
+        className={`relative w-full max-w-none h-[100dvh] min-h-[100dvh] sm:h-[100dvh] sm:rounded-none overflow-hidden flex flex-col border-0 transition-colors ${
           isDark
             ? 'bg-[#000000] text-[#F5F5F7] border-white/15 shadow-[0_24px_80px_rgba(0,0,0,0.85)]'
             : 'bg-[#F5F5F7] text-[#1D1D1F] border-black/15 shadow-[0_24px_80px_rgba(0,0,0,0.45)]'
@@ -1823,7 +1823,7 @@ export default function LifeOS() {
         )}
 
         {/* Main Scrollable Viewport */}
-        <div className="flex-1 overflow-y-auto no-scrollbar pb-28 px-4 pt-5">
+        <div className="flex-1 min-h-0 overflow-y-auto no-scrollbar pb-[calc(112px+env(safe-area-inset-bottom))] px-[clamp(14px,4vw,20px)] pt-[calc(16px+env(safe-area-inset-top))]">
           {/* ==================== TAB 1: MY DAY ==================== */}
           {activeTab === 'myday' && (
             <div className="space-y-4">
@@ -2778,7 +2778,7 @@ export default function LifeOS() {
           type="button"
           aria-label="Quick Add"
           onClick={() => setQuickAddOpen(!quickAddOpen)}
-          className="absolute right-4 bottom-[78px] z-30 w-[54px] h-[54px] rounded-[16px] bg-[#007AFF] text-white flex items-center justify-center shadow-[0_8px_22px_rgba(0,122,255,0.42),inset_0_1px_0_rgba(255,255,255,0.35)] transition-transform duration-200 active:scale-90"
+          className="absolute right-[clamp(16px,4vw,22px)] bottom-[calc(84px+env(safe-area-inset-bottom))] z-30 w-[58px] h-[58px] rounded-[20px] bg-gradient-to-br from-[#35A1FF] via-[#007AFF] to-[#0056D6] text-white flex items-center justify-center shadow-[0_10px_28px_rgba(0,122,255,0.34),inset_0_1px_0_rgba(255,255,255,0.45)] transition-all duration-200 active:scale-90 active:shadow-[0_4px_12px_rgba(0,122,255,0.25)]"
         >
           <span className={`transition-transform duration-200 ${quickAddOpen ? 'rotate-45' : ''}`}>
             <SFSymbol name="plus" size={23} strokeWidth={2.4} />
@@ -2892,7 +2892,7 @@ export default function LifeOS() {
 
         {/* Bottom 5-Tab Navigation Bar */}
         <nav
-          className={`shrink-0 h-[68px] px-2 border-t grid grid-cols-5 items-center ${
+          className={`shrink-0 min-h-[68px] h-[calc(68px+env(safe-area-inset-bottom))] pb-[env(safe-area-inset-bottom)] px-1.5 border-t grid grid-cols-5 items-center ${
             isDark
               ? 'bg-[#121214]/95 border-white/[0.08] backdrop-blur-md'
               : 'bg-white/95 border-black/[0.07] backdrop-blur-md'
