@@ -4,12 +4,31 @@
 
 * {
   -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
 }
 
 html, body, #root {
+  width: 100%;
+  min-width: 0;
   height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+body {
+  overscroll-behavior: none;
+  touch-action: manipulation;
+}
+
+#root {
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+button, input, textarea, select {
+  font: inherit;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -19,4 +38,16 @@ html, body, #root {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media (max-width: 480px) {
+  .lifeos-app-frame {
+    border-radius: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
 }
