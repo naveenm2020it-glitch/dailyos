@@ -495,7 +495,7 @@ function LifeOSNavIcon({ tab, active }) {
   switch (tab) {
     case 'myday':
       return (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <rect
             x="3.5"
             y="4"
@@ -518,7 +518,7 @@ function LifeOSNavIcon({ tab, active }) {
       );
     case 'tasks':
       return (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <rect
             x="4"
             y="4"
@@ -541,7 +541,7 @@ function LifeOSNavIcon({ tab, active }) {
       );
     case 'habits':
       return (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
             d="M12 3.5 18.8 12 12 20.5 5.2 12 12 3.5Z"
             fill={active ? '#10B981' : stroke}
@@ -559,7 +559,7 @@ function LifeOSNavIcon({ tab, active }) {
       );
     case 'progress':
       return (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <rect
             x="4.2"
             y="12.5"
@@ -598,7 +598,7 @@ function LifeOSNavIcon({ tab, active }) {
     case 'notes':
     default:
       return (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <rect
             x="4.5"
             y="3.5"
