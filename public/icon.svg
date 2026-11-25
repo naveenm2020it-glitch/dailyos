@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="titaniumBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#242429"/>
+      <stop offset="48%" stop-color="#141418"/>
+      <stop offset="100%" stop-color="#09090C"/>
+    </linearGradient>
+    <linearGradient id="rimHighlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="blueArc" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#007AFF"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="emeraldArc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="crystalFacetTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#007AFF"/>
+    </linearGradient>
+    <linearGradient id="crystalFacetRight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <radialGradient id="ambientGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#007AFF" stop-opacity="0.26"/>
+      <stop offset="60%" stop-color="#10B981" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="gemShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- iOS Superellipse Squircle Chassis -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#titaniumBg)"/>
+  <rect x="17.5" y="17.5" width="477" height="477" rx="110.5" fill="none" stroke="url(#rimHighlight)" stroke-width="3"/>
+
+  <!-- Subtle Radial Aura -->
+  <circle cx="256" cy="256" r="196" fill="url(#ambientGlow)"/>
+
+  <!-- Architectural Outer Hairline Bezel -->
+  <circle cx="256" cy="256" r="174" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2"/>
+
+  <!-- Left Half Tasks Arc (iOS Blue -> Sky) -->
+  <path d="M 256 102 A 154 154 0 0 0 256 410" fill="none" stroke="url(#blueArc)" stroke-width="22" stroke-linecap="round"/>
+
+  <!-- Right Half Habits Arc (Emerald -> Mint) -->
+  <path d="M 256 102 A 154 154 0 0 1 256 410" fill="none" stroke="url(#emeraldArc)" stroke-width="22" stroke-linecap="round"/>
+
+  <!-- Top & Bottom Jewel Separator Nodes -->
+  <rect x="250" y="91" width="12" height="22" rx="4" fill="#141418"/>
+  <rect x="250" y="399" width="12" height="22" rx="4" fill="#141418"/>
+
+  <!-- Inner Recessed Chamber -->
+  <circle cx="256" cy="256" r="122" fill="#111115" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="2"/>
+
+  <!-- Sculpted 4-Facet Crystalline LifeOS Star/Diamond Emblem -->
+  <g filter="url(#gemShadow)">
+    <!-- North-West Sapphire Facet -->
+    <polygon points="256,160 256,256 184,256" fill="url(#crystalFacetTop)"/>
+    <!-- North-East Ice-Sky Facet -->
+    <polygon points="256,160 328,256 256,256" fill="#38BDF8"/>
+    <!-- South-East Emerald Facet -->
+    <polygon points="256,256 328,256 256,352" fill="url(#crystalFacetRight)"/>
+    <!-- South-West Deep Cobalt-Teal Facet -->
+    <polygon points="184,256 256,256 256,352" fill="#0284C7"/>
+    <!-- Specular Glass Bevel Lines -->
+    <line x1="256" y1="160" x2="256" y2="352" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="2"/>
+    <line x1="184" y1="256" x2="328" y2="256" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="2"/>
+  </g>
+
+  <!-- Center Zenith Core -->
+  <circle cx="256" cy="256" r="22" fill="#141418" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="2.5"/>
+  <circle cx="256" cy="256" r="9" fill="#FFFFFF"/>
+</svg>

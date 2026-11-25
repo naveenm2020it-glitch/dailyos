@@ -1,0 +1,10 @@
+{
+  "appId": "com.lifeos.personal",
+  "appName": "LIFEOS",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "backgroundColor": "#09090B",
+    "allowMixedContent": false
+  }
+}
